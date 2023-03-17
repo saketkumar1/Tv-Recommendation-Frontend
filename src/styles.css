@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+.active a{
+    color: #FFC105 !important;
+}
+
+.mat-dialog-container {
+    background-color: #343a40 !important;
+    color: white;
+}
+/* html, body { height: 100%;
+ }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
