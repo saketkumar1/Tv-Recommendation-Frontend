@@ -1,0 +1,19 @@
+<div class="card-container">
+    <div class="card-image-container">
+        <img src='{{ "http://image.tmdb.org/t/p/w500/" + movie?.poster_path }}' alt="movie" class="card-image">
+    </div>
+    <div class="card-footer-container text-center">
+        <div class="text-white watchOn">WATCH ON</div>
+        <!-- <img src="/assets/img/prime.png" alt="ott_logo" class="logo-image"> -->
+        <div *ngIf="getOttPoster()==null">
+            <!-- <img src="/assets/img/prime.png" alt="ott_logo" class="logo-image"> -->
+        </div>
+        <div *ngIf="getOttPoster()!=null">
+            <img src='{{ "http://image.tmdb.org/t/p/w500/" + getOttPoster()[0]?.logo_path }}' alt="ott_logo"
+                class="logo-image">
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
