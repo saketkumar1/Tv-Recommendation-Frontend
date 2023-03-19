@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="outercard">
+    <h5 class="text-white card-heading">Top Rated</h5>
+    <div class="scrollmenu">
+
+        <div class="p-3 card-bunch">
+
+            <div *ngFor="let card of getTopRated()" [ngStyle]="{'margin': '1rem'}">
+                <app-card [movie]="card" [typeof]="1"  [routerLink]="['/detail', card.id, 1 ]"></app-card>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="outercard">
+    <h5 class="text-white card-heading">Trending</h5>
+    <div class="scrollmenu">
+
+        <div class="p-3 card-bunch">
+
+            <div *ngFor="let card of getTrending()" [ngStyle]="{'margin': '1rem'}">
+                <app-card [movie]="card" [typeof]="1"  [routerLink]="['/detail', card.id, 1 ]"></app-card>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div class="outercard">
+    <h5 class="text-white card-heading">Recommendation</h5>
+    <div class="scrollmenu">
+
+        <div class="p-3 card-bunch">
+
+            <div *ngFor="let card of getRecommendation()" [ngStyle]="{'margin': '1rem'}">
+                <app-card [movie]="card" [typeof]="1"  [routerLink]="['/detail', card.id, 1 ]"></app-card>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

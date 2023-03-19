@@ -1,0 +1,163 @@
+<div class="body">
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="header__title">Recommendation Survey Form</h1>
+        <p id="description" class="header__description">
+          We would love to hear your thoughts on how we can improve your experience.
+        </p>
+        <img src="https://res.cloudinary.com/alexandracaulea/image/upload/v1585333913/illustration_x46ict.svg" alt=""
+          aria-hidden="true" class="illustration" />
+      </header>
+      <main class="main">
+        <form method="GET" id="survey-form" class="survey" novalidate #surveyForm="ngForm" (ngSubmit)="onSubmit(surveyForm.value)" novalidate>
+  
+  
+  
+  
+          <div [ngSwitch]="day">
+  
+            <!-- First Question -->
+            <div *ngSwitchCase='0'>
+              <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1"
+                data-panel="firstPanel" data-requirement="option">
+                <h2 class="survey__panel__question">
+                  <span class="visuallyhidden">Question 1 of 5 </span>Which Genre do you prefer watching?
+                </h2>
+                <div class="survey__panel__period">
+                  <div class="form-check">
+                    <input id="never" type="radio" name="question_1" value="Comedy" ngModel />
+                    <label for="never">Comedy</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="lessthenoneyear" type="radio" name="question_1" value="Romantic" ngModel/>
+                    <label for="lessthenoneyear">Romantic</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="onetotwoyears" type="radio" name="question_1" value="Thriller" ngModel/>
+                    <label for="onetotwoyears">Thriller</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="morethentwoyears" type="radio" name="question_1" value="Action" ngModel/>
+                    <label for="onetotwoyears">Action</label>
+                  </div>
+                </div>
+                <p class="error-message"></p>
+              </section>
+            </div>
+  
+  
+  
+            <!-- Second Question -->
+            <div *ngSwitchCase='1'>
+              <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1"
+                data-panel="firstPanel" data-requirement="option">
+                <h2 class="survey__panel__question">
+                  <span class="visuallyhidden">Question 1 of 5 </span>Which another Genre do you prefer watching?
+                </h2>
+                <div class="survey__panel__period">
+                  <div class="form-check">
+                    <input id="never" type="radio" name="question_2" value="Comedy" ngModel />
+                    <label for="never">Comedy</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="lessthenoneyear" type="radio" name="question_2" value="Romantic" ngModel/>
+                    <label for="lessthenoneyear">Romantic</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="onetotwoyears" type="radio" name="question_2" value="Thriller" ngModel/>
+                    <label for="onetotwoyears">Thriller</label>
+                  </div>
+                  <div class="form-check">
+                    <input id="morethentwoyears" type="radio" name="question_2" value="Action" ngModel/>
+                    <label for="onetotwoyears">Action</label>
+                  </div>
+                </div>
+                <p class="error-message"></p>
+              </section>
+            </div>
+  
+  
+  
+  
+            <div *ngSwitchCase='2'>
+              <section class="survey__panel survey__panel--current" data-index="2" data-panel="secondPanel"
+                data-requirement="option">
+                <h2 class="survey__panel__question">
+                  <span class=""></span>What do you prefer watching more?
+                </h2>
+                <div class="survey__panel__satisfaction">
+                  <div class="form-group">
+                    <input id="notsatified" type="radio" class="radiobox" name="question_3" value="Movies" ngModel/>
+                    <label for="notsatified">Movies</label>
+                  </div>
+                  <div class="form-group">
+                    <input id="quitesatisfied" type="radio" class="radiobox" name="question_3" value="TvShows" ngModel/>
+                    <label for="quitesatisfied">TV shows</label>
+                  </div>
+                </div>
+                <p class="error-message"></p>
+              </section>
+            </div>  
+  
+  
+             <div *ngSwitchCase='3'>
+              <section class="survey__panel survey__panel--current" data-index="4" data-panel="fourthPanel"
+                data-requirement="option">
+                <h2 class="survey__panel__question">
+                  <span class="visuallyhidden"></span>Please Specify your Age Group
+                </h2>
+                <div class="survey__panel__recommendation">
+                  <div class="form-group">
+                    <input type="radio" class="radiobox" name="question_4" id="norecomment" value="Below12" ngModel />
+                    <label for="norecomment">Below 12</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="12plus" ngModel />
+                    <label for="mayberecommend">12-18 years</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="18plus" ngModel />
+                    <label for="yesrecommend">18 above</label>
+                  </div>
+                </div>
+                <p class="error-message"></p>
+              </section>
+            </div>
+
+  
+            <div *ngSwitchCase='4'>
+              <section class="survey__panel survey__panel--current" data-index="5" data-panel="fifthPanel"
+                data-requirement="name;email;country;age">
+                <h2 class="survey__panel__question">
+                  <span class="visuallyhidden"></span>We would like to know your recent favourite movie/show
+                </h2>
+                <div class="survey__panel__personaldetails">
+                  <div class="form-group">
+                    <!-- <label for="name" id="name-label" class="name">Please specify your favourite movie/show</label> -->
+                    <input type="text" id="name" name="name" required placeholder="Movie/Show Name" ngModel/>
+                    <p class="error-message"></p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+  
+  
+          <div class="form-buttons">
+            <button class="button" type="button" name="prev" (click)="handlePrev()" [disabled]="day==0" aria-label="Previous" aria-hidden="true">
+              Prev
+            </button>
+            <button class="button" type="button" name="next" aria-label="Next"
+              (click)="handleNext()" [disabled]="day==4">Next</button>
+            <button class="button" type="submit" id="submit" name="submit" [disabled]="day!=4">
+              Submit
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  
+    <!-- {{surveyForm.value | json}} -->
+  </div>
+    
+  
