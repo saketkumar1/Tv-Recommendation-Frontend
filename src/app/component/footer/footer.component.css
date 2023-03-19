@@ -1,0 +1,44 @@
+*{
+    background-color: #080526;
+}
+.info {
+    padding: 5rem 2rem;
+    padding-left: 5rem;
+    color: white;
+    /* display: grid;
+    grid-template-columns: 32% 19% 19% 19%; */
+    gap: 10px;
+}
+
+.icons {
+    margin-top:70px;
+}
+
+.icons-circle {
+    /* padding: 15px; */
+    margin-right: 25px;
+    border-radius: 50%;
+    color: #FFC105;
+}
+
+/* Footer */
+footer {
+    background-color: #FFC105;
+    height: 6vh;
+    text-align: center;
+    padding: 0.8rem;    /* margin-top: 20px; */
+}
+
+
+/* ---------Media Queries----------- */
+
+@media screen and (max-width: 768px) {
+    .info {
+        /* margin-top: 1rem; */
+      padding: 2rem 0.5rem 0 1.4rem;
+    }
+
+    .icons {
+        margin: 2rem 0;
+    }
+}

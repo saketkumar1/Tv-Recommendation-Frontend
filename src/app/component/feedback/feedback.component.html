@@ -1,0 +1,74 @@
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="0">
+        <img class='sb' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/circback.svg'>
+
+        <div class='col_left'>
+            <img class='board' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/resultboard.png'>
+            <div class='summary'>
+                <div>Have you watched {{movies[0].movie_name}}</div>
+                <!-- <img src='{{ "http://image.tmdb.org/t/p/w500/" + data.dataKey.poster_path }}' alt="movie" class="card-image"> -->
+                <div (click)="next()" class="first">YES
+                    <img (click)="next()" class='next'
+                        src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/greenbutton3.png'>
+                </div>
+                <div class="first">NO <img (click)="close()" class='next'
+                        src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/greenbutton3.png'></div>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="1">
+        <div class='tut'>
+            <div class='tut_inner'>
+                <h2>Drag the characters mouths to reflect your satisfaction</h2>
+                <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/Dec_31,_2015_22:28.gif'>
+                <p (click)="next()">Ok</p>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="2">
+        <img class='sb' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/circback.svg'>
+        <h1 class='question_s'>Do you like movie</h1>
+        <h2>Drag the cheeky monkeys mouth up or down to reflect your satisfaction!</h2>
+        <div class='character_image1'>
+            <img class='character_image' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/monkey.svg'>
+        </div>
+        <div class='character_smile'>
+            <div class='smiler_input'>
+                <input (change)="change($event)" class='monkey slider' max='20' min='0' type='range'>
+                <svg class='smile monkey' height='20px' version='1.1' width='70px' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M10 10 C 20 10, 40 10, 50 10' fill='transparent' stroke-linecap='round' stroke-width='4'
+                        stroke='#562911'></path>
+                </svg>
+            </div>
+        </div>
+        <div class='rating'>
+            <span>{{ans}}</span>
+            <img (click)="next()" class='next'
+                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/greenbutton3.png'>
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+
+        <div class='feedbackform_slide'>
+            <img class='sb' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/circback.svg'>
+            <div class='feedbackform_slide__inner'>
+                <div class='col_left'>
+                    <img class='board' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/resultboard.png'>
+                    <div class='summary'>
+                        The rating given by you to
+                        <div> {{movies[0].movie_name| uppercase}}</div>
+                        <div>{{ans | uppercase}}</div>
+                    </div>
+                </div>
+                <div class='col_right'>
+                    <div class='rating end'>
+                        <span>Thankyou!</span>
+                        <img (click)="submit()" class='next'
+                            src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/greenbutton3.png'>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

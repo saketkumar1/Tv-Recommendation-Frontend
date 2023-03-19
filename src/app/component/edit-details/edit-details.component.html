@@ -1,0 +1,48 @@
+
+<app-navbar></app-navbar>
+<div class="bg-image">
+    <div class="login-box">
+        <h1 style="text-align:center;">Edit Details</h1>
+        <form [formGroup]="changeForm" (ngSubmit)="onChanges()">
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" class="" formControlName="name">
+                <div class ="error" *ngIf="name?.invalid && name?.touched">Too short (enter atleast 3 characters)</div>
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" class="" formControlName="email">
+            
+                <div class ="error" *ngIf="email?.invalid && email?.touched">Too short (enter atleast 3 characters)</div>
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text"  class="" formControlName="username">
+            
+                <div class ="error" *ngIf="username?.invalid && username?.touched"> username is invalid</div>
+
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faChild"></fa-icon>
+                <input type="text"  class="" formControlName="age">
+            
+                <div class ="error" *ngIf="age?.invalid && age?.touched">This field is required</div>
+
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faLock"></fa-icon>
+                <input type="password" name="" value=""  class="" formControlName="password">
+           
+                <div class ="error" *ngIf="password?.invalid && password?.touched"> password is invalid</div>
+
+            </div>
+
+            <button class="btn btn-primary getStarted" [disabled]=""loginForm.invalid>Confirm Changes</button>
+        </form>
+    </div>
+</div>

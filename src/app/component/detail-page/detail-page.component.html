@@ -1,0 +1,80 @@
+<app-navbar></app-navbar>
+
+<div style="background-color: #010023;">
+    <div class="bg-image"
+        [style.background]="'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(http://image.tmdb.org/t/p/w500/' + detail.poster_path + ')'"
+        [style.background-repeat]="'no-repeat'" [style.background-size]="'cover'" [style.background-position]="'left'">
+        <div class="movie-details">
+            <div class="row">
+                <div class="col-md-6 left-box">
+                    <h2>{{detail?.title|| detail?.name}}</h2>
+                    <div>
+                        <span class="mr-5"> {{detail.release_date||detail.first_air_date}}</span>
+
+                        <span>
+                            <span *ngFor="let gen of detail.genres">
+                                &#x2022; {{gen.name}}
+                            </span>
+
+                        </span>
+                        &#x2022;
+                        <span *ngIf="detail.runtime==null">{{detail.number_of_seasons}} season
+                            {{detail.number_of_episodes}} episodes</span>
+                        <span *ngIf="detail.runtime!=null"> <span> {{timeConvert(detail.runtime)}}</span></span>
+
+                    </div>
+                    <br>
+
+                    <div><b>Overview</b></div>
+                    <p>
+                        {{detail?.overview}}</p>
+                    <a (click)="opent(firstDialog)" class="trailer-buttons"><fa-icon [icon]="playIcon" style="margin-right: 7px;"></fa-icon>
+                        Watch Now</a>
+                    <span *ngIf="this.video.results[0]!=null">
+                        <a href={{getvideo()}} target="_blank" class="trailer-buttons"> <fa-icon [icon]="filmIcon"
+                                style="margin-right: 7px;"></fa-icon>Play Trailer</a>
+                    </span>
+
+                    <!-- <a href="#" class="download-btn">Download</a> -->
+                </div>
+
+
+
+                <div class="col-md-6 text-center right-box">
+                    <img class="movie-img" src='{{ "http://image.tmdb.org/t/p/w500/" + detail?.poster_path }}' alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="similar">
+    <h5 class="text-white pl-5">Similar</h5>
+    <div class="scrollmenu">
+
+        <div class="p-3 card-bunch">
+
+            <div *ngFor="let card of getSimilar()" [ngStyle]="{'margin': '1rem'}">
+                <app-card [movie]="card" [typeof]=type [routerLink]="['/detail', card.id, type ]"></app-card>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<ng-template #firstDialog>
+    <div class="mainDialog">
+    <h2 matDialogTitle>Add <b>{{detail?.title|| detail?.name}}</b> to watchlist?</h2>
+    <p matDialogContent></p>
+    <mat-dialog-actions align="end">
+        <button (click)="createWatchList()" class="btn" matDialogClose>Yes</button>
+        <button class="btn" matDialogClose>No</button>
+    </mat-dialog-actions>
+</div>
+</ng-template>
+
+
+<app-footer></app-footer>

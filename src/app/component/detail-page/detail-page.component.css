@@ -1,0 +1,156 @@
+body {
+    background-color: #080526;
+}
+
+.bg-image {
+    padding: 3rem;
+}
+
+.logo {
+    margin-top: 10px;
+}
+
+.left-box {
+    color: white;
+}
+
+.left-box a {
+    text-decoration: none !important;
+    color: black;
+    border-radius: 30px;
+    padding: 7px 20px;
+    margin-top: 35px;
+    background: transparent;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+    border: 1px solid #FFC105;
+}
+
+fa-icon:hover {
+    color: black;
+}
+
+.left-box a:hover {
+    box-shadow: 0px 0px 15px 2px #909090;
+    transform: scale(1.1);
+    background: #FFC105;
+    color: black;
+}
+
+.download-btn {
+    border: 1px solid #fff !important;
+    background: transparent !important;
+}
+
+.movie-img {
+    height: 350px;
+    box-shadow: -4px 4px 5px 0;
+    border: 1px solid #FFC105;
+    padding: 2rem;
+}
+
+.series h3 {
+    color: #fff;
+
+}
+
+.series img {
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: -4px 4px 5px 0 #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.series img:hover {
+    transform: translateY(-10px);
+
+}
+
+
+div.scrollmenu {
+    background-color: #080526;
+    overflow: scroll;
+    white-space: nowrap;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+}
+
+div.scrollmenu div {
+    display: inline-block;
+
+}
+
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+
+}
+
+.trailer-buttons {
+    cursor: pointer;
+}
+
+h5 {
+
+    padding-left: 4rem;
+}
+
+.similar {
+    padding-top: 2rem;
+    background-color: #080526;
+    height: 30rem;
+}
+
+
+
+
+.mainDialog button {
+    background-color: #FFC105;
+    width: 4rem;
+    color: black;
+    border-radius: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+} 
+
+.mainDialog button:hover {
+    scale: 1.1;
+}
+
+/* ---------Media Queries-------------- */
+
+@media screen and (max-width: 768px) {
+    .right-box {
+      display: none;
+    }
+
+    .bg-image {
+        padding: 1rem;
+    }
+
+    .trailer-buttons {
+        width: 38%;
+        font-size: 11px;
+        padding: 7px 18px !important;
+    }
+
+    .similar {
+        height: 22rem;
+    }
+
+    .similar h5 {
+        padding: 1rem;
+    }
+
+    .scrollmenu  {
+        padding-left: 0 !important;
+    }
+
+    .card-bunch {
+        padding: 0.2rem !important;
+    }
+}
