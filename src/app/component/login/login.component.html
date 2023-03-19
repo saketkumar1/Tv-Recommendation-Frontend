@@ -1,0 +1,56 @@
+<!-- <p>login works!</p> -->
+<div class="bg-image">
+    <div class="login-box">
+        <h1>Login</h1>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" placeholder="Username" class="" formControlName="username">
+                
+                <span class ="error" *ngIf="username?.invalid && username?.touched"> username is invalid</span>
+    
+            </div>
+    
+    
+            <div class="textbox">
+                <fa-icon [icon]="visible ? eyeSlash : eye"  id="eyeSlash" (click)="myFunction()" style="cursor: pointer;"></fa-icon>
+                <!-- <fa-icon [icon]="eye" id="eye" *ngIf="hide"></fa-icon> -->
+
+    
+                <input type="password" placeholder="Password" id="password" formControlName="password" [type]="hide ? 'password' : 'text'">
+               
+                <span class ="error" *ngIf="password?.invalid && password?.touched"> password is invalid</span>
+    
+            </div>
+            <span *ngIf="wrong">Wrong Credentials!</span>
+            <button class="btn btn-primary" [disabled]=""loginForm.invalid>Sign in</button>
+        </form>
+        <div class="my-3 text-center">Or Continue with</div>
+        <div class="login-icons">
+            <asl-google-signin-button></asl-google-signin-button>
+        </div>
+        <div class="mt-3"><a routerLink="/forgot-password">Forgot Password?</a></div>
+    </div>
+    </div>
+
+
+    <!-- <script>
+        function myFunction() {
+          var x = document.getElementById("password");
+          var eye = document.getElementById("eye");
+          var eyeSlash= document.getElementById("eyeSlash");
+
+          if (x.type === "password") {
+            x.type = "text";
+            eye.removeAttribute('hidden');
+            eyeSlash.setAttribute('hidden');
+          } else {
+            x.type = "password";
+            eyeSlash.removeAttribute('hidden');
+            eye.setAttribute('hidden');
+          }
+        }
+        </script> -->
+    
+    

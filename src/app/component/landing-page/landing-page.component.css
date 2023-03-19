@@ -1,0 +1,65 @@
+.bg-image {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/assets/img/collage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.main-content {
+    text-align: center;
+    opacity: 1;
+    border: 3px solid white;
+    padding: 30px 60px;
+    /* z-index: 5; */
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kanit', sans-serif;
+}
+
+.getStarted {
+    padding: 10px 60px;
+    text-decoration: none;
+    background-color: #FFC105;
+}
+
+.getStarted:hover {
+    background-color: #FFC105;
+    color: black;
+    box-shadow: 0px 0px 15px 2px #909090;
+}
+.signUp {
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.signUp:hover {
+    color: #FFC105;
+}
+
+.first-section {
+    background-color: rgb(24 23 23);
+    color: #FFC105;
+}
+.second-section {
+    background-color: rgb(37 37 37);
+    text-align: center;
+    color: white;
+}
+.aboutUs {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2::after {
+    display: inline-block;
+    content: "";
+    /* this sets the spacing in between the letters and the line */
+    width: 67%;
+    height: 4px;
+    background-color: #FFC105;
+}

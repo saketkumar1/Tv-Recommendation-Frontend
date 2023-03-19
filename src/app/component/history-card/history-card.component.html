@@ -1,0 +1,16 @@
+<div id="movie-card-list">
+    <div class="card movie-card maincard">
+        <div class="imgsection">
+            <img class="imgsection1" src='{{ "http://image.tmdb.org/t/p/w500/" + historyVal.results[0].poster_path }}' alt="movie">
+        </div>
+ 
+        <div class="movie-content">
+            <div class="movie-header">
+                <h2 class="movie-title">{{historyVal.results[0].title||historyVal.results[0].name}}</h2>
+            </div>
+            <p class="movie-desc">{{historyVal.results[0].overview | slice:0:200 }} ...</p>
+            <a (click)="onRemove(historyVal.results[0].title||historyVal.results[0].name);">
+                Remove History  &nbsp;<fa-icon [icon]="filmIcon"></fa-icon></a>
+        </div>
+    </div>
+</div>
