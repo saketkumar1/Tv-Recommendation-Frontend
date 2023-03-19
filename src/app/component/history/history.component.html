@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="search-section">
+    <h1 style="color:azure; margin-left: 120px; margin-top: 50px;" >My History:</h1>
+    <div *ngIf="getMovies().length > 0">
+        <div *ngFor="let card of getMovies()">
+            <app-history-card [historyVal]="card" ></app-history-card>
+        </div>
+    </div>
+    <div class="not-found" *ngIf="getMovies().length == 0"> -->
+        <h2 class="text-white">Not Found</h2>
+     </div>
+
+    
+</div>
+
+
+<app-footer></app-footer>
+
