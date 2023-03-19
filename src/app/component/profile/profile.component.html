@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img src="/assets/img/profile-icon-png-898.png" alt="">
+            </div>
+            <div class="name">{{userData?.name}}</div>
+            
+        </div>
+
+        <div class="card-footer">
+            <div class="numbers">
+                <div class="item"><span>Username: </span>{{username}}</div>
+                <div class="item"><span>Mail Id: </span>{{userData?.email}}</div>
+                <div class="item"><span>Age: </span>{{userData?.age}}</div>
+            </div>
+            <button class="btn btn-primary" routerLink="/edit-details">Edit Details</button>
+        </div>
+
+        
+    </div>
+
+    
+    
+</body>
