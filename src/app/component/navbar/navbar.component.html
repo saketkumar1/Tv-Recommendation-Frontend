@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#"><img src="assets/img/sdads 1.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" aria-current="page" routerLink="/browse" >Home</a>
+            <div class="underline"></div>
+          </li>
+          <li class="nav-item" [routerLinkActive]="'active'">
+            <a class="nav-link" routerLink="/series" >Series</a>
+            <div class="underline"></div>
+          </li>
+          <li class="nav-item" [routerLinkActive]="'active'">
+            <a class="nav-link" routerLink="/movies">Movies</a>
+            <div class="underline"></div>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="'active'">
+            <a class="nav-link" routerLink="/plans">Plans</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav mb-2 mb-lg-0 right-item" style="justify-content: space-between;">
+          <div class="profile">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <fa-icon [icon]="userIcon" class="text-white"></fa-icon>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" [routerLink]="['/profile']">My Profile</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/mysubscriptions']">My Subscriptions</a></li>
+                <li><a class="dropdown-item" routerLink="/history">My History</a></li>
+                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
