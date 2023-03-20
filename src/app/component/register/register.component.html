@@ -1,0 +1,58 @@
+<div class="bg-image">
+    <div class="login-box">
+        <h1>Register</h1>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true"></div>
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" placeholder="Enter Name" class="" formControlName="name">
+            
+                <div class ="error" *ngIf="name?.invalid && name?.touched">Too short (enter atleast 3 characters)</div>
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" placeholder="Enter Email-ID" class="" formControlName="email">
+            
+                <div class ="error" *ngIf="email?.invalid && email?.touched">Too short (enter atleast 3 characters)</div>
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="faUser"></fa-icon>
+                <input type="text" placeholder="Enter Username" class="" formControlName="username">
+            
+                <div class ="error" *ngIf="username?.invalid && username?.touched"> username is invalid</div>
+
+            </div>
+            
+            <div class="textbox">
+                <fa-icon [icon]="faChild"></fa-icon>
+                <input type="text" placeholder="Enter Age" class="" formControlName="age">
+            
+                <div class ="error" *ngIf="age?.invalid && age?.touched">This field is required</div>
+
+            </div>
+
+            <div class="textbox">
+                <fa-icon [icon]="visible ? eyeSlash : eye"  id="eyeSlash" (click)="myFunction()" style="cursor: pointer;"></fa-icon>
+
+                <input [type]="hide ? 'password' : 'text'" placeholder="Enter Password" name="" value=""  class="" formControlName="password">
+           
+                <div class ="error" *ngIf="password?.invalid && password?.touched"> password is invalid</div>
+
+            </div>
+
+            <button class="btn btn-primary getStarted" [disabled]=""loginForm.invalid>Register</button>
+            <span *ngIf="wrong">Unable To Register!</span>
+        </form>
+
+
+        <div class="my-3 text-center">Or Continue with</div>
+        <div class="login-icons">
+            <asl-google-signin-button></asl-google-signin-button>
+        </div>
+
+
+    </div>
+</div>
