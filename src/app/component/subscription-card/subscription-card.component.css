@@ -1,0 +1,74 @@
+.subscription-card{
+    background-color: #211f54;
+    color: white;
+    height: 18rem;
+    cursor: pointer;
+    margin: 3rem 8rem 3rem 8rem;
+    box-shadow: -2px 0px 21px 1px rgba(255,255,255,0.75);
+}
+
+.subscription-content{
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+}   
+
+.subscription-content a{
+    text-decoration: none !important;
+    color: black;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.cardUpper{
+    height: 0%;
+    margin-top: 0px;
+}
+
+.logo-image {
+    height: 45px;
+    width: 50px;
+    padding: 5px;
+     
+}
+
+.column1 {
+    float: left;
+    width:50%;
+}
+
+
+.column3 {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding-right: 3rem;
+    width:50%;
+    
+}
+
+.column3 a{
+    border: 1px solid #FFC105;
+    color: white;
+    background-color: transparent;
+    margin-top: 9rem;
+    margin-left: 25px;
+}
+
+.column3 a:hover {
+    box-shadow: 0px 0px 15px 2px #909090;
+    transform: scale(1.1);
+    background: #FFC105;
+    color: black;
+}
+
+.ottlogo {
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+    border-radius: 100%;
+}
