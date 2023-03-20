@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="planMain">
+        <div class="cardbunch">
+            <div *ngFor="let result of results;let i = index">
+                <div class="card planMain1">
+
+                    <div class="cardUpper">
+                        <h2 class="text-center" style="color: #FFC105;padding-top: 15px;
+                        font-family: 'Secular One', sans-serif;">{{result.name}}</h2>
+                        <div class="d-flex justify-content-center mt-4" >
+                            <img *ngFor="let i of result.ott" src='{{"http://image.tmdb.org/t/p/w500/" + getPoster(i)}}' alt="movie" class="logo-image" >
+                        </div>
+                        <div class="paragraph text-center text-white mt-3">
+                            1 <span>Month</span>
+                            Subscription 
+                            <div style="margin-top: 5px; font-size: 25px; font-weight: bold;"> ₹ {{result.price}}/- </div>
+                        </div>
+                    </div>
+
+                    <div class="buy-now" >
+                        <button  [routerLink]="['/payment', result.id ]" class="btn col-5" style="background-color: #FFC105;">BUY NOW</button>
+
+                    </div>
+
+                    <div class="cardLower pb-3">
+
+                        <div class="extraDetails">
+                            <fa-icon [icon]="check" class="text-white"></fa-icon>
+                            <div>Get unlimited access to thousands of shows and movies with no ads</div>
+                        </div>
+
+                        <div class="extraDetails">
+                            <fa-icon [icon]="check" class="text-white"></fa-icon>
+                            <div>Watch on your favorite devices</div>
+                        </div>
+
+                        <div class="extraDetails">
+                            <fa-icon [icon]="check" class="text-white"></fa-icon>
+                            <div>Switch plans or cancel anytime</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>z
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

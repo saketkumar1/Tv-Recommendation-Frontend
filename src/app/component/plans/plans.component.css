@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Secular+One&display=swap');
+
+
+.planMain1{
+    position: relative;
+    display: flex;
+    flex-direction: column  ;
+    height: 30rem;
+    width: 20rem;
+    transition: all .2s ease-in-out;
+    /* background: linear-gradient(180deg, rgba(177,217,230,1) 23%, rgba(0,66,86,1) 87%, rgba(0,66,86,1) 99%); */
+}
+
+.planMain1:hover{
+    box-shadow: 0px 0px 15px 2px #909090;
+    transform: scale(1.1);
+}
+
+.planMain{
+    height: 100vh;
+    padding-top: 6rem;
+    background-color: #010023;
+}
+.cardbunch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 20vh;
+    grid-template-columns: 1fr  1fr 1fr;
+}
+
+.cardUpper{
+    background-color: #2f2f67 ;
+    height: 50%;
+}
+
+.cardLower{
+    background-color: #211F54 ;
+    color: white;
+   padding-top: 11%;
+   height: 50%;
+}
+
+.buy-now {
+    position: absolute;
+    width: 100%;
+    left: 30%;
+    top: 45%;
+}
+
+.logo-image {
+    height: 45px;
+    width: 50px;
+    padding: 5px;
+     
+}
+
+.extraDetails {
+    padding: 1rem;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.extraDetails div {
+    margin-left:0.7rem;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+} 
+
+.extraDetails fa-icon {
+    font-size: 23px;
+    color: #FFC105 !important;
+}
+
+.cardUpper div img {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+/* -------Media Queries------------ */
+
+@media screen and (max-width: 768px) {
+    .planMain {
+      padding-top: 1rem;
+      overflow: scroll;
+    }
+
+    .planMain1 {
+        margin-bottom: 1rem;
+        height: 40vh;
+    }
+
+    .cardUpper{
+        height: 100%;
+    }
+
+    .cardLower {
+     display: none;   
+    }
+
+    .buy-now {
+        top: 202px;
+    }
+}

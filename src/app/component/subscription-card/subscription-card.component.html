@@ -1,0 +1,29 @@
+<div id="subscription-card-list">
+    <div class="card subscription-card">
+        <div class="subscription-content">
+
+            <div class="column1">
+                <div class="subscription-header">
+                    <h2 class="subscription-title" style="color: #FFC105;">{{subsVal.planName}} <img class="ottlogo" *ngFor="let i of getOttList()" src='{{"http://image.tmdb.org/t/p/w500/" + getPoster(i)}}'
+                        alt="movie" ></h2>
+                    
+                    
+                </div>
+                <p class="subscription-desc">Subscription ID: xxxxx{{subsVal.id}}</p>
+                <div class="cardUpper">
+                    <p>Start Date: {{subsVal.startDate | date: 'dd/MM/YYYY'}}</p>
+                    <p>End Date: {{subsVal.endDate | date: 'dd/MM/YYYY'}}</p>
+                </div>
+
+
+                <br>
+                <p class="subscription-desc">Total price: <b>₹ {{subsVal.totalPrice}}</b></p>
+            </div>
+
+            <div class="column3">
+                <h3>{{Days}} days left</h3>
+                <a (click)="onRemove();">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

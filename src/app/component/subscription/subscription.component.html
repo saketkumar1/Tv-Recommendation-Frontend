@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="search-section">
+    <h1 style="color:azure; margin-left: 120px; margin-top: 50px;" >My Subscriptions:</h1>
+     <div *ngIf="getSubscriptions().length > 0">
+        <div *ngFor="let card of getSubscriptions()[0]">
+
+            <app-subscription-card [subsVal]="card"></app-subscription-card>
+        </div>
+    </div>
+    <div class="not-found" *ngIf="getSubscriptions().length == 0"> -->
+        <h2 class="text-white">Not Found</h2>
+     </div>
+
+
+    
+</div>
+
+
+<app-footer></app-footer>
+
