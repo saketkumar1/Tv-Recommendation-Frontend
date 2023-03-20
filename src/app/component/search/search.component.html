@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="search-section">
+    <div *ngIf="movieList().length > 0">
+        <div *ngFor="let card of movieList().slice(0, 5);">
+            <app-search-card [searchVal]="card" ></app-search-card>
+        </div>
+    </div>
+    <div class="not-found" *ngIf="movieList().length == 0">
+        <h2 class="text-white">Not Found</h2>
+    </div>
+
+    
+</div>
+
+
+<app-footer></app-footer>
+

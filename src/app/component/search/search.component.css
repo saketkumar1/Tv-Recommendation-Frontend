@@ -1,0 +1,22 @@
+body {
+    background-color: #010023;
+    /* height: 90vh; */
+
+}
+
+.search-section{
+    background-color: #010023;
+    height: 90vh;
+    overflow: auto;
+}
+
+.search-section::-webkit-scrollbar {
+    display: none;
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    padding-top: 40vh;
+    /* align-items: center; */
+}

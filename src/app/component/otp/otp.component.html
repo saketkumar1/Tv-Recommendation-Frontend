@@ -1,0 +1,21 @@
+
+<div class="bg-image">
+    <div class="login-box">
+        <h1>One Time Password</h1>
+    
+        <form [formGroup]="otpForm" (ngSubmit)="validateOTP()">
+
+            <div class="textbox">
+                <fa-icon [icon]="faLock"></fa-icon>
+                <input type="text" placeholder="Enter OTP" class="" formControlName="gotp">
+                
+                <span class ="error" *ngIf="gotp?.invalid && gotp?.touched"></span>
+    
+            </div>
+    
+            <span *ngIf="wrong">Invalid OTP</span>
+            <button class="btn btn-primary" [disabled]=""emailForm.invalid>Verify OTP</button>
+        </form>
+            
+    </div>
+    </div>
