@@ -1,0 +1,19 @@
+
+<div id="movie-card-list"  [routerLink]="['/detail', searchVal.id, (searchVal.media_type=='tv'?2:1) ]">
+
+    <div class="card movie-card">
+        <div class="imgsection">
+            <img class="imgsection1" src='{{ "http://image.tmdb.org/t/p/w500/" + searchVal.poster_path }}' alt="movie"
+                >
+        </div>
+
+        <div class="movie-content">
+            <div class="movie-header">
+                <h2 class="movie-title">{{searchVal.title||searchVal.name}}</h2>
+                <h5 class="movie-date">{{searchVal.release_date||searchVal.first_air_date}} | {{searchVal.original_title||searchVal.original_name}}</h5>
+            </div>
+            <p class="movie-desc">{{searchVal.overview | slice:0:200 }} ...</p>
+            <a routerLink="/detail/{{searchVal.id}}"><fa-icon [icon]="playIcon" style="margin-right: 7px;"></fa-icon> Watch Now</a>
+        </div>
+    </div>
+</div>
